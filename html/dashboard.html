@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/medical-friend.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
     <header>
         <nav>
         <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="home.html"><span class="brand-title">Your Health Tracker</span></a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
+            <!-- Empathetic language -->
             <li><a href="medical-friend.html">Medical Friend</a></li>
         </ul>
         </nav>
         <div class="profile" id="profileToggle">
         <img src="../sources/images.jpeg" alt="User Profile Picture">
-        <span>Mario Camacho</span>
+        <span id="profilePicture-firstName"></span>
         </div>
     </header>
 
@@ -58,66 +61,51 @@
                             </span>
                         </div>
                     </div><br>
-                    <p>In a financial squeeze? Talk to a <strong>financial advisor</strong></p>
+                    <p>You have several unpaid dues. We understand that this can be overwhelming. Would you like to speak with a <strong>financial advisor</strong>?</p>
                 </div>
+
+                <div class="suggestion">
+                    <strong>Medical Information</strong>
+                    <p>Dr. Pearson prescribed onyxatol in June. Let us know how well it is working!</p>
+                    <div class="scale-container">
+                        <div class="scale">
+                            <div class="scale-bubble" data-value="1">1</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="2">2</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="3">3</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="4">4</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="5">5</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="6">6</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="7">7</div>
+                        </div><br>
+                    </div>
+                </div>
+
                 <div class="suggestion">
                     <strong>Next Appointment</strong>
-                    <p id="appointmentText">Monday, June 16th, 2025 at 1:00 PM</p>
+
+                    <p id="appointmentText"></p>
                     <div style="margin-bottom:1rem;">
                         <table class="mini-calendar" id="miniCalendar">
                             <thead>
                                 <tr class="mini-calendar-caption-row" style="margin-bottom:0.25rem;">
-                                    <th colspan="7">June 2025</th>
+                                    <th colspan="7" id="calendarMonthYear"></th>
                                 </tr>
                                 <tr>
                                     <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="calendar-day" data-day="1">1</span></td>
-                                    <td><span class="calendar-day" data-day="2">2</span></td>
-                                    <td><span class="calendar-day" data-day="3">3</span></td>
-                                    <td><span class="calendar-day" data-day="4">4</span></td>
-                                    <td><span class="calendar-day" data-day="5">5</span></td>
-                                    <td><span class="calendar-day" data-day="6">6</span></td>
-                                    <td><span class="calendar-day" data-day="7">7</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="calendar-day" data-day="8">8</span></td>
-                                    <td><span class="calendar-day" data-day="9">9</span></td>
-                                    <td><span class="calendar-day" data-day="10">10</span></td>
-                                    <td><span class="calendar-day" data-day="11">11</span></td>
-                                    <td><span class="calendar-day" data-day="12">12</span></td>
-                                    <td><span class="calendar-day" data-day="13">13</span></td>
-                                    <td><span class="calendar-day" data-day="14">14</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="calendar-day" data-day="15">15</span></td>
-                                    <td><span class="calendar-day highlight" data-day="16">16</span></td>
-                                    <td><span class="calendar-day" data-day="17">17</span></td>
-                                    <td><span class="calendar-day" data-day="18">18</span></td>
-                                    <td><span class="calendar-day" data-day="19">19</span></td>
-                                    <td><span class="calendar-day" data-day="20">20</span></td>
-                                    <td><span class="calendar-day" data-day="21">21</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="calendar-day" data-day="22">22</span></td>
-                                    <td><span class="calendar-day" data-day="23">23</span></td>
-                                    <td><span class="calendar-day" data-day="24">24</span></td>
-                                    <td><span class="calendar-day" data-day="25">25</span></td>
-                                    <td><span class="calendar-day" data-day="26">26</span></td>
-                                    <td><span class="calendar-day" data-day="27">27</span></td>
-                                    <td><span class="calendar-day" data-day="28">28</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="calendar-day" data-day="29">29</span></td>
-                                    <td><span class="calendar-day" data-day="30">30</span></td>
-                                </tr>
+                            <tbody id="calendarBody">
+                                <!-- Calendar days will be injected here -->
                             </tbody>
                         </table>
                     </div>
-                    <p>You've had frequent appointments with this doctor. Have you considered <strong>meeting with a specialist?</strong></p>
+                    <p>You've had frequent appointments with Dr. Pearson. Have you considered <strong>meeting with a specialist?</strong></p>
                 </div>
             </div>
         </section>
@@ -130,8 +118,8 @@
         <div class="side-menu-header">
             <img src="../sources/images.jpeg" alt="User Profile Picture">
             <div class="user-info">
-                <h3>Mario Camacho</h3>
-                <p>mariocamacho@example.com</p>
+                <h3></h3>
+                <p></p>
             </div>
         </div>
         <ul class="side-menu-items">
@@ -172,13 +160,13 @@
     <div id="paymentSuccessOverlay" class="payment-success-overlay">
         <div class="checkmark-circle">
             <svg width="80" height="80" viewBox="0 0 80 80">
-                <circle cx="40" cy="40" r="38" fill="#43a047"/>
+                <circle cx="40" cy="40" r="38" fill="var(--checkmark-bg)"/>
                 <polyline points="25,43 37,55 57,33" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
     </div>
 
-    <script src="../js/index.js"></script>
+    <script src="../js/home.js"></script>
     <script src="../js/dashboard.js"></script>
 </body>
 </html>

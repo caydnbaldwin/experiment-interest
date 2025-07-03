@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
@@ -22,15 +23,31 @@
         <span id="profilePicture-firstName"></span>
         </div>
     </header>
-
-    <div class="chatbot-container">
-        <iframe
-            src="https://www.chatbase.co/chatbot-iframe/ILjdWx5EGujXsAyHnSZZI"
-            width="100%"
-            style="height: 100%; min-height: 700px; width: 50%; margin: 0 auto; display: block; border: none; border-radius: 16px; overflow: hidden;"
-            frameborder="0"
-            allow="clipboard-write"
-        ></iframe>
+    
+    <div class="hero-container">
+        <!-- Visuals -->
+        <img class="hero-img" src="../sources/baby-sister-kiss-16x5.webp" alt="Baby Sister Kiss">
+        <section class="purpose-section">
+            <img class="hero-img logo" src="../sources/logo.png" alt="Logo">
+        </section>
+    </div>
+    
+    <div class="main-sections">
+        <section class="welcome-section">
+            <!-- Personalized greeting -->
+            <h1 id="welcomeMessage-firstName"></h1>
+            <p>We're glad to see you again. Your medical records are up to date and your next appointment is scheduled for 1pm on Monday, June 16th, 2025 at our Franklin office. You're ready to go!</p>
+        </section>
+    
+        <section class="suggestions-section">
+            <!-- Smart suggestions -->
+            <h1>Based off your recent activity, here are some suggestions for you:</h1>
+            <div class="suggestions-list">
+                <div class="suggestion"><a href="dashboard.html">View your next appointment</a></div>
+                <div class="suggestion" id="customizationShortcut">Change theme to your favorite color</div>
+                <div class="suggestion"><a href="medical-friend.html">Talk with the medical friend chatbot</a></div>
+            </div>
+        </section>
     </div>
 
     <div class="overlay" id="overlay"></div>
@@ -44,8 +61,9 @@
             </div>
         </div>
         <ul class="side-menu-items">
-            <li><a href="../html/profile.html">Profile Settings</a></li>
+            <li><a href="profile.html">Profile Settings</a></li>
             <li class="menu-item-with-dropdown">
+                <!-- Aesthetic customization -->
                 <a href="#" id="customizationToggle" class="dropdown-toggle">Customization</a>
                 <div class="customization-dropdown" id="customizationDropdown">
                     <div class="customization-section">
@@ -77,6 +95,5 @@
         </ul>
     </div>
     <script src="../js/home.js"></script>
-    <script src="../js/medical-friend.js"></script>
 </body>
 </html>

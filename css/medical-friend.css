@@ -39,9 +39,6 @@ body.deep-blue-mode .chatbot-container {
     background: #e3f2fd;
 }
 
-
-
-
 /* Google Wallet style payment success overlay */
 .payment-success-overlay {
     display: none;
@@ -64,7 +61,7 @@ body.deep-blue-mode .chatbot-container {
 }
 
 .checkmark-circle {
-    background: #43a047;
+    background: var(--checkmark-bg);
     border-radius: 50%;
     width: 110px;
     height: 110px;
