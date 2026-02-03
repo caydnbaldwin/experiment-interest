@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set appointment text
     if (appointmentText) {
-        appointmentText.textContent = formatDate(appointmentDate) + " at 1:00 PM";
+        appointmentText.textContent = formatDate(appointmentDate) + " at 1:00 PM with Dr. John Smith.";
     }
 
     // Build the calendar for the appointment month
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         const day16 = document.querySelector('.calendar-day[data-day="16"]');
         if (day16) day16.classList.add('highlight');
-        if (appointmentText) appointmentText.textContent = "Monday, June 16th, 2025 at 1:00 PM";
+        if (appointmentText) appointmentText.textContent = "Monday, June 16th, 2025 at 1:00 PM with Dr. John Smith.";
     }
 
     resetCalendarHighlight();
